@@ -4,9 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "npm run clean",
+    "prebuild": "npm run clean",
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rimraf dist"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "rimraf": "^5.0.5"
+  }
 }
