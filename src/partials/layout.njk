@@ -10,14 +10,19 @@
     <!-- TODO: add link tags, other meta tags, open graph info, etc. -->
   </head>
   <body>
-    <!-- TODO: make the header and footer overridable -->
+  {% block header %}
     <header>
       <p>This is the header.</p>
     </header>
-    <main>
-      {{ content | safe }}</main>
+  {% endblock %}
+  <main>
+    {% block content %}
+      {{ content | safe }}
+    {% endblock %}</main>
+  {% block footer %}
     <footer>
       <p>This is the footer.</p>
     </footer>
-  </body>
+  {% endblock %}
+</body>
 </html>
