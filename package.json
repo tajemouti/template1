@@ -8,13 +8,15 @@
     "prebuild": "npm run clean",
     "start": "eleventy --serve",
     "build": "eleventy",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "lint:html": "pa11y-ci -c .pa11yci.json './dist/**/*.html'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
+    "pa11y-ci": "^3.1.0",
     "rimraf": "^5.0.5"
   }
 }
